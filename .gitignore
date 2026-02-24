@@ -1,0 +1,6 @@
+.DS_Store
+*.HEIC
+*.jpg
+*.png
+node_modules/
+.vercel

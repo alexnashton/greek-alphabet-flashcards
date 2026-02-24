@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #0D5EAF 0%, #1E73BE 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.counter {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.mode-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.mode-btn {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background: white;
+    color: #0D5EAF;
+}
+
+.flashcard {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+}
+
+.card-front,
+.card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-back {
+    display: none;
+}
+
+.card-back.active {
+    display: flex;
+}
+
+.card-front.hidden {
+    display: none;
+}
+
+.letter-display {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.uppercase {
+    font-size: 120px;
+    font-weight: bold;
+    color: #0D5EAF;
+    line-height: 1;
+}
+
+.lowercase {
+    font-size: 80px;
+    color: #1E73BE;
+    margin-top: 10px;
+}
+
+.flip-btn {
+    background: #0D5EAF;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.flip-btn:hover {
+    background: #1E73BE;
+    transform: scale(1.05);
+}
+
+.pronounce-btn {
+    background: white;
+    color: #0D5EAF;
+    border: 2px solid #0D5EAF;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.pronounce-btn:hover {
+    background: #0D5EAF;
+    color: white;
+    transform: scale(1.05);
+}
+
+.pronounce-btn:active {
+    transform: scale(0.98);
+}
+
+.card-back h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.pronunciation,
+.example {
+    font-size: 20px;
+    color: #555;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.pronunciation strong,
+.example strong {
+    color: #0D5EAF;
+}
+
+.greek-word-section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f5f9ff;
+    border-radius: 12px;
+    border: 2px solid #0D5EAF;
+}
+
+.greek-word-label {
+    font-size: 14px;
+    color: #0D5EAF;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.greek-word {
+    font-size: 42px;
+    color: #0D5EAF;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.word-pronunciation {
+    font-size: 20px;
+    color: #1E73BE;
+    font-style: italic;
+    margin: 8px 0;
+}
+
+.word-meaning {
+    font-size: 18px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.test-panel {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    min-height: 400px;
+}
+
+.test-panel.hidden {
+    display: none;
+}
+
+.flashcard.hidden {
+    display: none;
+}
+
+.test-question {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.test-question h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.test-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.option-btn {
+    background: #f5f5f5;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.option-btn:hover {
+    background: #e8e8e8;
+    border-color: #0D5EAF;
+}
+
+.option-btn.correct {
+    background: #4caf50;
+    color: white;
+    border-color: #4caf50;
+}
+
+.option-btn.incorrect {
+    background: #f44336;
+    color: white;
+    border-color: #f44336;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+}
+
+.feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.feedback.hidden {
+    display: none;
+}
+
+.feedback.correct {
+    background: #4caf50;
+    color: white;
+}
+
+.feedback.incorrect {
+    background: #f44336;
+    color: white;
+}
+
+.progress {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: white;
+    transition: width 0.3s ease;
+    width: 4.17%;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .uppercase {
+        font-size: 80px;
+    }
+
+    .lowercase {
+        font-size: 60px;
+    }
+
+    .test-options {
+        grid-template-columns: 1fr;
+    }
+}

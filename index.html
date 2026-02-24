@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greek Alphabet Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Greek Alphabet Flashcards</h1>
+
+        <div class="controls">
+            <button id="prevBtn" class="btn">← Previous</button>
+            <span id="counter" class="counter">1 / 24</span>
+            <button id="nextBtn" class="btn">Next →</button>
+        </div>
+
+        <div class="mode-toggle">
+            <button id="studyMode" class="mode-btn active">Study Mode</button>
+            <button id="testMode" class="mode-btn">Test Mode</button>
+        </div>
+
+        <div id="flashcard" class="flashcard">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="letter-display">
+                        <div class="uppercase" id="uppercase">Α</div>
+                        <div class="lowercase" id="lowercase">α</div>
+                    </div>
+                    <button id="flipBtn" class="flip-btn">Show Answer</button>
+                </div>
+
+                <div class="card-back">
+                    <h2 id="letterName">Alpha</h2>
+                    <div class="pronunciation">
+                        <strong>Sound:</strong> <span id="sound">"ah"</span>
+                    </div>
+                    <div class="example">
+                        <strong>Like in:</strong> <span id="example">"father"</span>
+                    </div>
+                    <div class="greek-word-section">
+                        <div class="greek-word-label">Greek Word Example:</div>
+                        <div class="greek-word" id="greekWord">αγάπη</div>
+                        <div class="word-pronunciation" id="wordPronunciation">ah-GAH-pee</div>
+                        <div class="word-meaning" id="wordMeaning">"love"</div>
+                    </div>
+                    <button id="pronounceBtn" class="pronounce-btn" title="Listen to pronunciation">
+                        🔊 Hear Pronunciation
+                    </button>
+                    <button id="flipBackBtn" class="flip-btn">Show Letter</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="testPanel" class="test-panel hidden">
+            <div class="test-question">
+                <h2>How do you pronounce this letter?</h2>
+                <div class="letter-display">
+                    <div class="uppercase" id="testLetter">Α</div>
+                </div>
+            </div>
+            <div class="test-options" id="testOptions">
+                <!-- Options will be generated dynamically -->
+            </div>
+            <div id="feedback" class="feedback hidden"></div>
+        </div>
+
+        <div class="progress">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
